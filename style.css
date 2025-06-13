@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Visby CF precisa ser instalada localmente ou importada via @font-face se disponível */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    background-color: #20254C;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 5em;
+    background-color: #20254C;
+    box-shadow: 0 1px 12px #12152a;
+}
+
+img {
+    width: 5em;
+    height: 5em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 5em;
+}
+
+#container-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/* MENU / BOTÕES */
+.buttons-header {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 5em;
+    gap: 20px;
+}
+
+.buttons-header li {
+  position: relative;
+  color: white;
+  font-family: 'Visby CF', 'Montserrat', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.buttons-header li:hover {
+  transform: translateY(-4px);
+}
+
+.buttons-header li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  bottom: -8px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.buttons-header li:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* BOTÕES */
+.button-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1.5em;
+    border-radius: 10px;
+    margin-left: 2em;
+    color: white;
+    font-weight: bold;
+    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    border: none;
+    background: linear-gradient(to right, #E61A4A, #CA1A41);
+    box-shadow: 0 4px 12px rgba(230, 26, 74, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.button-header:hover {
+    color: #20254C;
+    background: linear-gradient(to right, #f2d95d, #EEC35A);
+    box-shadow: 0 4px 12px rgb(242, 217, 93);
+}
+
+/* SECTION 1 */
+.section-1 {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/Imagens/bg-section-1.png');
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* CONTAINER (SECTION 1) */
+#container-section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-section-1 h1 {
+    font-size: 38px;
+}
+
+
+#container-section-1 h1, p {
+    color: white;
+}
+
+#teg {
+    color: #CA1A41;
+}
+
+/* CONTEÚDO (SECTION 1) */
+
+#content1-section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+#content2-section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+/* BOTÃO (SECTION 1) */
+
+.button-section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1.5em;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    border: none;
+    background: linear-gradient(to right, #E61A4A, #CA1A41);
+    box-shadow: 0 4px 12px rgba(230, 26, 74, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.button-section-1:hover {
+    color: #20254C;
+    background: linear-gradient(to right, #f2d95d, #EEC35A);
+    box-shadow: 0 4px 12px rgb(242, 217, 93);
+}
