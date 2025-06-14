@@ -47,10 +47,6 @@ html, body {
     background-color: #2C336A;
 }
 
-main {
-    padding-top: 5em;
-}
-
 
 /* HEADER */
 header {
@@ -61,8 +57,12 @@ header {
     height: 5em;
     background-color: #20254C;
     box-shadow: 0 1px 12px #12152a;
-    position: fixed;
+    /* position: fixed; */
 }
+
+/* main {
+    padding-top: 5em;
+} */
 
 .logo img {
     width: 5em;
@@ -258,6 +258,8 @@ header {
 
 #linha-vermelha {
     box-sizing: border-box;
+    height: 3px;
+    background-color: #CA1A41;
     border-color: #CA1A41;
     width: 38em;
     margin-bottom: 2em;
@@ -340,6 +342,11 @@ input {
     font-weight: 400;
     height: 4em;
     border-radius: 10px;
+    border: none;
+}
+
+input:focus {
+  outline: none;
 }
 
 #form-submit-button{
@@ -447,11 +454,16 @@ input {
     color:  #F0F0F0;
     font-size: 18px;
     font-weight: 500;
+    line-height: 30px;
 }
 
 .section-text-image .section-content .content-text p span{
     display: block;
     margin-bottom: 20px;
+}
+
+.section-text-image .section-content .content-text p .negrito {
+    font-weight: bold;
 }
 
 @media screen and (max-width: 769px){
