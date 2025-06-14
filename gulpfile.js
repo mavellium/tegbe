@@ -30,3 +30,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', gulp.series('minify-css', 'minify-js', 'minify-html', 'watch'));
+gulp.task('build', gulp.series('minify-css', 'minify-js', 'minify-html'));
