@@ -47,6 +47,11 @@ html, body {
     background-color: #2C336A;
 }
 
+main {
+    padding-top: 5em;
+}
+
+
 /* HEADER */
 header {
     display: flex;
@@ -56,6 +61,7 @@ header {
     height: 5em;
     background-color: #20254C;
     box-shadow: 0 1px 12px #12152a;
+    position: fixed;
 }
 
 img {
