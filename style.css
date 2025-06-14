@@ -253,10 +253,10 @@ img {
 }
 
 .section-text-image{
-    max-width: 1250px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 100px 0px;
 }
 
 .section-text-image .section-content{
@@ -281,6 +281,7 @@ img {
 
 .section-text-image .section-content .content-text{
     flex: 1;
+    width: 1em;
 }
 
 .section-text-image .section-content .content-text h2{
