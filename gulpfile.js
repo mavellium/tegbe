@@ -18,9 +18,9 @@ gulp.task('minify-js', function () {
 });
 
 gulp.task('minify-html', function () {
-  return gulp.src('src/html/*.html')
+  return gulp.src('src/*.html')
     .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
-    .pipe(gulp.dest('dist/html'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function () {
