@@ -25,9 +25,9 @@ export function minifyHtml() {
 export function watchFiles() {
   watch('src/js/*.js', minifyJs);
   watch('src/*.html', minifyHtml);
-  watch('src/assets/**/*.{png,jpg,jpeg,gif,svg}', copyImages);
+  watch('src/css/*.css', minifyCss);
+  watch('src/assets/**/*.{png,jpg,jpeg,gif,svg}');
 }
 
-  watch('src/css/*.css', minifyCss);
 export const build = series(minifyCss, minifyJs, minifyHtml);
-export default series(minifyCss, minifyJs, minifyHtml,watchFiles);
+export default series(build, watchFiles);
