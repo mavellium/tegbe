@@ -39,4 +39,37 @@ document.addEventListener('DOMContentLoaded', function() {
     fadeInElements.forEach(element => {
         observer.observe(element);
     });
+
+    const swiper = new Swiper('.swiper', {
+      lazy: {
+        loadPrevNext: true,
+        loadOnTransitionStart: true, // opcional, pode ajudar se as imagens não carregarem de imediato
+      },
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 });
+
+
+function toggleAnswer(element) {
+  const answer = element.querySelector('.faq-answer');
+  const isVisible = answer.style.display === 'block';
+
+  // Alterna o estado
+  if (isVisible) {
+    answer.style.display = 'none';
+    element.classList.remove('open');
+  } else {
+    answer.style.display = 'block';
+    element.classList.add('open');
+  }
+}
