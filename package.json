@@ -4,8 +4,7 @@
   "description": "Landing Page Tegbe",
   "main": "script.js",
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp build"
+    "dev": "gulp"
   },
   "author": "",
   "license": "ISC",
