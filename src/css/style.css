@@ -621,7 +621,6 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #2C336A;
 }
 
 .section-faq h1 {
@@ -636,7 +635,6 @@ header {
     justify-content: center;
     height: auto;
     width: 100%;
-    background-color: #2C336A;
     color: white;
     gap: 1em;
 }
@@ -693,7 +691,6 @@ header {
     padding: 10em;
     justify-content: center;
     align-items: center;
-    background-color: #2C336A;
 }
 
 #section-2-steps {
@@ -959,7 +956,7 @@ input:focus {
 .section-customers .content-customers{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     gap: 20px;
     flex-wrap: wrap;
@@ -981,14 +978,103 @@ input:focus {
     object-fit: contain;
 }
 
+/* ========= RESPONSIVIDADE ========= */
+@media (max-width: 1024px) {
+  .buttons-header {
+    gap: 1em;
+  }
+
+  .buttons-header li,
+  .button-header {
+    font-size: 1rem;
+  }
+
+  .section-1 h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #container-section-1 {
+    flex-direction: column;
+    padding: 2em 1em;
+    text-align: center;
+  }
+
+  .section-content {
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+  }
+
+  .section-content figure img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  .content-text h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+.section-text-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10em;
+}
+
+.section-text-image .section-content {
+    width: 100%;
+    gap: 10em;
+}
+
+.section-text-image .section-content .content-text {
+    flex: 1;
+    width: 100%;
+}
+
+.section-carousel {
+    padding: 0 5em 5em 5em;
+}
+
+.section-2 {
+    flex-direction: column;
+}
+
+#section-2-steps {
+    margin-right: 0;
+    margin-bottom: 5em;
+}
+
+}
+
 @media screen and (max-width: 769px){
-    .section-text-image .section-content{
+    .section-text-image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
-
-    .section-notforu img{
-        max-width: 500px;
+    
+    .content-text {
+        flex: 1;
         width: 100%;
-        max-height: 500px;
+        padding: 10em;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-1 h1 {
+        font-size: 1.2rem;
+    }
+
+    .content-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .button-section-1 {
+        font-size: 0.9rem;
     }
 }
