@@ -62,11 +62,11 @@ header {
     height: 5em;
     background-color: #20254C;
     box-shadow: 0 1px 12px #12152a;
-    /* position: fixed; */
+    position: fixed;
 }
 
  main {
-    /* padding-top: 5em; */
+    padding-top: 5em; 
     background-image: url("/public/background.png");
 }
 
@@ -237,7 +237,7 @@ header {
     flex-direction: column;
     height: auto;
     width: 100%;
-    padding: 10em;
+    padding: 40px 10em 5em;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -271,7 +271,7 @@ header {
     justify-content: start;
     border-radius: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-    border-bottom: 1em solid #CA1A41;
+    border-bottom: 10px solid #CA1A41;
 }
 
 #for-business-card-icon {
@@ -742,6 +742,13 @@ header {
     height: 5em;
 }
 
+.instagram-media {
+        border: none !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-shadow: none !important;
+}
+
 #content-text-1 {
     display: flex;
     gap: 1em;
@@ -871,7 +878,7 @@ input:focus {
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
-    padding: 100px 0px;
+    padding: 5em 0px;
 }
 
 .section-text-image .section-content{
