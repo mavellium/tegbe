@@ -29,5 +29,10 @@ export function watchFiles() {
   watch('src/assets/**/*.{png,jpg,jpeg,gif,svg}');
 }
 
-export const build = series(minifyCss, minifyJs, minifyHtml);
-export default series(build, watchFiles);
+export function copyImages() {
+  return src('public/**/*.{png,jpg,jpeg,gif,svg}', {encoding: false})
+    .pipe(dest('dist/public'));
+}
+
+export const build = series(minifyCss, minifyJs, minifyHtml, copyImages);
+export default series(build, watchFiles, copyImages);
