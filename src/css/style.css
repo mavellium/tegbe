@@ -45,6 +45,7 @@ html, body {
     height: 100%;
     font-family: 'Visby CF', 'Montserrat', sans-serif;
     background-color: #2C336A;
+    overflow-x: hidden;
 }
 
 a {
@@ -63,6 +64,7 @@ header {
     background-color: #20254C;
     box-shadow: 0 1px 12px #12152a;
     position: fixed;
+    z-index: 1000;
 }
 
  main {
@@ -100,7 +102,7 @@ header {
 
 .buttons-header li {
   position: relative;
-  color: white;
+  color: #fff;
   font-family: 'Visby CF', 'Montserrat', sans-serif;
   font-weight: 500;
   cursor: pointer;
@@ -119,7 +121,7 @@ header {
   bottom: -8px;
   width: 8px;
   height: 8px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -138,7 +140,7 @@ header {
     padding: 0.75em 1.5em;
     border-radius: 10px;
     margin-left: 2em;
-    color: white;
+    color: #fff;
     font-weight: bold;
     font-family: 'Visby CF', 'Montserrat', sans-serif;
     border: none;
@@ -182,7 +184,7 @@ header {
 
 
 #container-section-1 h1, p {
-    color: white;
+    color: #fff;
 }
 
 #teg {
@@ -215,7 +217,7 @@ header {
     justify-content: center;
     padding: 0.75em 1.5em;
     border-radius: 10px;
-    color: white;
+    color: #fff;
     font-weight: bold;
     font-family: 'Visby CF', 'Montserrat', sans-serif;
     border: none;
@@ -261,7 +263,6 @@ header {
 }
 
 #for-business-card {
-    width: 360px;
     height: 520px;
     display: flex;
     flex-direction: column;
@@ -272,6 +273,8 @@ header {
     border-radius: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
     border-bottom: 10px solid #CA1A41;
+    max-width: 360px;
+    width: 100%;
 }
 
 #for-business-card-icon {
@@ -306,6 +309,8 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #CA1A41;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 #lose-client-container {
@@ -314,11 +319,10 @@ header {
     flex-direction: column;
     text-align: start;
     justify-content: center;
-    margin-right: 10em;
+    flex: 1;
 }
 
 #lose-client-content h1 {
-    text-wrap: nowrap;
     color: #F2D95D;
     font-size: 2em;
     margin-bottom: 1em;
@@ -343,10 +347,13 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    width: 100%;
+    flex: 1;
+    max-width: 350px;
 }
 
 #button-section-lose-client:hover {
-    color: white;
+    color: #fff;
     background: linear-gradient(to right, #20254C, #21245f);
     box-shadow: 0 4px 12px rgb(32, 37, 76);
 }
@@ -378,8 +385,8 @@ header {
 
 #to-choose-itens {
     width: 100%;
-    height: 10em;
-    color: white;
+    height: 100%;
+    color: #fff;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -486,7 +493,7 @@ header {
   background-color: #CA1A41;
   padding: 1em;
   gap: 1em;
-  color: white;
+  color: #fff;
 }
 
 .card-footer img {
@@ -545,11 +552,12 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 4.5em;
+    gap: 2.5em;
 }
 
 #section-notforu-container h1 {
     color: #F2D95D;
+    margin-bottom: 40px;
 }
 
 .notforu-item {
@@ -557,6 +565,9 @@ header {
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    background-color: #B11838;
+    padding: 15px 30px;
+    border-radius: 10px;
 }
 
 .notforu-icon {
@@ -573,7 +584,7 @@ header {
 #section-notforu-content1 {
     display: flex;
     flex-direction: column;
-    gap: 4em;
+    padding: 0 20px;
 }
 
 .amarelo {
@@ -586,7 +597,7 @@ header {
     justify-content: center;
     flex-direction: column;
     gap: 3em;
-    color: white;
+    color: #fff;
 }
 
 #button-section-notforu {
@@ -607,7 +618,7 @@ header {
 }
 
 #button-section-notforu:hover {
-    color: white;
+    color: #fff;
     background: linear-gradient(to right, #20254C, #21245f);
     box-shadow: 0 4px 12px rgb(32, 37, 76);
 }
@@ -621,7 +632,6 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #2C336A;
 }
 
 .section-faq h1 {
@@ -636,8 +646,7 @@ header {
     justify-content: center;
     height: auto;
     width: 100%;
-    background-color: #2C336A;
-    color: white;
+    color: #fff;
     gap: 1em;
 }
 
@@ -690,10 +699,11 @@ header {
     display: flex;
     height: auto;
     width: 100%;
-    padding: 10em;
+    padding: 5em;
     justify-content: center;
     align-items: center;
-    background-color: #2C336A;
+    flex-wrap: wrap;
+    row-gap: 20px;
 }
 
 #section-2-steps {
@@ -702,6 +712,8 @@ header {
     align-items: center;
     justify-content: center;
     margin-right: 5em;
+    width: 100%;
+    flex: 1;
 }
 
 #section-2-title {
@@ -713,7 +725,11 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #fff;
+}
+
+#section-2-container-steps .figure-arrow, #section-2-container-steps .figure-arrow img{
+    width: 100%;
 }
 
 #linha-vermelha {
@@ -721,20 +737,27 @@ header {
     height: 3px;
     background-color: #CA1A41;
     border-color: #CA1A41;
-    width: 38em;
+    width: 100%;
     margin-bottom: 2em;
 }
 
 #section-2-content1, #section-2-content2 {
     display: flex;
-    height: 15em;
-    width: 40em;
+    height: 100%;
+    max-width: 600px;
+    width: 100%;
     gap: 2em;
     border-radius: 10px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: #21244D;
+    position: relative;
+    padding: 25px;
+}
+
+#section-2-content2{
+    padding-top: 55px;
 }
 
 /* Figura em section-2-content1 à esquerda */
@@ -754,19 +777,19 @@ header {
     gap: 1em;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    color: #fff;
 }
 
 #section-2-content1 h1 {
     position: absolute;
-    margin-bottom: 7em;
-    margin-left: 23em;
+    right: 20px;
+    top: 20px;
 }
 
 #section-2-content2 h1 {
     position: absolute;
-    margin-bottom: 7em;
-    margin-right: 23em;
+    left: 20px;
+    top: 20px;
 }
 
 /* Figura em section-2-content2 à direita */
@@ -779,27 +802,28 @@ header {
     gap: 1em;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    color: #fff;
 }
 
 
 #section-2-form {
     display: flex;
     height: auto;
-    width: 40em;
+    max-width: 450px;
+    padding: 50px 20px;
+    width: 100%;
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #21244D;
-
+    flex: 1;
 }
 
 form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 2em;
     gap: 20px;
 }
 
@@ -818,12 +842,12 @@ input:focus {
 
 #form-submit-button{
     display: flex;
-    height: 3em;
+    height: 100%;
     align-items: center;
     justify-content: center;
     padding: 0.75em 1.5em;
     border-radius: 10px;
-    color: white;
+    color: #fff;
     font-weight: bold;
     margin-top: 1em;
     font-family: 'Visby CF', 'Montserrat', sans-serif;
@@ -832,7 +856,6 @@ input:focus {
     box-shadow: 0 4px 12px rgba(230, 26, 74, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
-    white-space: nowrap;
 }
 
 #form-submit-button:hover {
@@ -878,7 +901,7 @@ input:focus {
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
-    padding: 5em 0px;
+    padding: 5em 1em;
 }
 
 .section-text-image .section-content{
@@ -903,18 +926,13 @@ input:focus {
 
 .section-text-image .section-content .content-text{
     flex: 1;
-    width: 1em;
 }
 
 .section-text-image .section-content .content-text h2{
     font-size: 32px;
     font-weight: 600;
-    color: #fff;
-    margin-bottom: 40px;
-}
-
-.section-text-image .section-content .content-text h2 span{
     color:  #F2D95D;
+    margin-bottom: 40px;
 }
 
 .section-text-image .section-content .content-text p{
@@ -922,6 +940,7 @@ input:focus {
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
+    text-align: justify;
 }
 
 .section-text-image .section-content .content-text p span{
@@ -1025,24 +1044,6 @@ input:focus {
       font-size: 1.4rem;
       text-align: center;
     }
-  
-  .section-text-image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 10em;
-  }
-  
-    .section-text-image .section-content {
-        width: 100%;
-        gap: 10em;
-    }
-    
-    .section-text-image .section-content .content-text {
-        flex: 1;
-        width: 100%;
-    }
     
     .section-carousel {
         padding: 0 5em 5em 5em;
@@ -1064,12 +1065,6 @@ input:focus {
           align-items: center;
           justify-content: center;
           flex-direction: column;
-      }
-  
-      .content-text {
-          flex: 1;
-          width: 100%;
-          padding: 10em;
       }
   }
   
@@ -1096,5 +1091,77 @@ input:focus {
         max-width: 500px;
         width: 100%;
         max-height: 500px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    header #container-header{
+        display: none;
+    }
+
+    header .logo{
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+
+    #content1-section-1 h1{
+        font-size: 24px;
+    }
+
+    .section-for-business, .section-customers, .section-to-choose, .section-carousel, .section-faq, .section-2{
+        padding: 3em 1em;
+    }
+
+    .section-notforu{
+        padding: 6em 1em;
+    }
+
+    #lose-client-content h1, .section-to-choose h1, #section-2-title h2{
+        text-align: center;
+    }
+
+    .section-lose-client{
+        padding: 3em 2em;
+    }
+
+    #to-choose-itens{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #to-choose-itens h2{
+        text-align: center;
+        padding: 0 20px 20px 20px
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .swiper-button-next svg, .swiper-button-prev svg{
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .card-content p{
+        font-size: 14px;
+    }
+
+    #section-2-content1, #section-2-content2{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #lose-client-content h1{
+        font-size: 1.7em;
+    }
+
+    #button-section-lose-client{
+        font-size: 14px;
     }
 }

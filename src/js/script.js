@@ -1,75 +1,76 @@
-// script.js
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling para âncoras (links internos)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Previne o comportamento padrão do link
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
 
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth' // Rolagem suave
-                });
-            }
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
         });
+      }
     });
+  });
 
-    // --- Animação Fade-in ao Scroll (Usando Intersection Observer API para performance) ---
-    const fadeInElements = document.querySelectorAll('.js-fade-in');
+  const fadeInElements = document.querySelectorAll(".js-fade-in");
 
-    const observerOptions = {
-        root: null, // O viewport é o elemento raiz
-        rootMargin: '0px',
-        threshold: 0.1 // O elemento será animado quando 10% dele estiver visível
-    };
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible'); // Adiciona a classe para iniciar a transição CSS
-                observer.unobserve(entry.target); // Para de observar o elemento após ele ficar visível
-            }
-        });
-    }, observerOptions);
-
-    // Observa cada elemento com a classe 'js-fade-in'
-    fadeInElements.forEach(element => {
-        observer.observe(element);
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
     });
+  }, observerOptions);
 
-    const swiper = new Swiper('.swiper', {
-      lazy: {
-        loadPrevNext: true,
-        loadOnTransitionStart: true, // opcional, pode ajudar se as imagens não carregarem de imediato
+  fadeInElements.forEach((element) => {
+    observer.observe(element);
+  });
+
+  const swiper = new Swiper(".swiper", {
+    lazy: {
+      loadPrevNext: true,
+      loadOnTransitionStart: true,
+    },
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
       },
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: 20,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+      768: {
+        slidesPerView: 2,
       },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+    },
+  });
 });
 
-
 function toggleAnswer(element) {
-  const answer = element.querySelector('.faq-answer');
-  const isVisible = answer.style.display === 'block';
+  const answer = element.querySelector(".faq-answer");
+  const isVisible = answer.style.display === "block";
 
-  // Alterna o estado
   if (isVisible) {
-    answer.style.display = 'none';
-    element.classList.remove('open');
+    answer.style.display = "none";
+    element.classList.remove("open");
   } else {
-    answer.style.display = 'block';
-    element.classList.add('open');
+    answer.style.display = "block";
+    element.classList.add("open");
   }
 }
