@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -46,7 +46,7 @@
 
             <div class="section-content">
                 <figure>
-                    <img src="/public/test-image.png" alt="imagem de teste" />
+                    <img src="/public/test-image.png" alt="imagem de teste" loading="lazy" />
                 </figure>
 
                 <div class="content-text">
@@ -242,7 +242,6 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
 
-                    <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="carousel-card">
                             <div class="card-content">
@@ -291,7 +290,6 @@
                         </div>
                     </div>
 
-                    <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <div class="carousel-card">
                             <div class="card-content">
@@ -336,7 +334,6 @@
                         </div>
                     </div>
 
-                    <!-- Slide 3 -->
                     <div class="swiper-slide">
                         <div class="carousel-card">
                             <div class="card-content">
@@ -383,7 +380,6 @@
 
                 </div>
 
-                <!-- Swiper Buttons -->
                 <div class="swiper-button-next">
                     <svg width="24" height="24" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -398,7 +394,6 @@
                             fill="#F0F0F0" />
                     </svg>
                 </div>
-                <!-- <div class="swiper-pagination"></div> -->
             </div>
         </section>
 
@@ -593,13 +588,11 @@
                     aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/agenciategbe/" target="_blank" aria-label="Instagram"><i
                         class="fab fa-instagram"></i></a>
-                <!-- <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> -->
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
-
 </html>
