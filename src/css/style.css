@@ -79,6 +79,10 @@ header {
     z-index: 1000;
 }
 
+header.header-scrolled{
+   background-color: #000; 
+}
+
 main {
     box-shadow: 0 1px 12px 5px #0e1022;
     background-color: #2C336A;

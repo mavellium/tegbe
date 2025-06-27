@@ -83,6 +83,21 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+
+  const header = document.querySelector('header');
+  const firstSection = document.querySelector('.section-1');
+
+    window.addEventListener("scroll", () => {
+      const sectionBottom = firstSection.getBoundingClientRect().bottom;
+
+      if (sectionBottom <= 0) {
+        header.classList.remove("header-default");
+        header.classList.add("header-scrolled");
+      } else {
+        header.classList.remove("header-scrolled");
+        header.classList.add("header-default");
+      }
+    });
 });
 
 function toggleAnswer(element) {
