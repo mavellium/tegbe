@@ -1189,11 +1189,16 @@ input:focus {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 2em;
 }
+
+.section-funil .section-content-funil svg {
+        height: 20em;
+    }
 
 .section-funil .section-content-funil .text-content-funil {
     display: flex;
+    width: 100%;
     flex-direction: column;
     text-align: start;
     justify-content: center;
@@ -1335,6 +1340,27 @@ input:focus {
         text-align: center;
         padding: 0 1em 1em;
     }
+
+    .section-funil {
+        padding: 5em 1em;
+    }
+
+    .section-funil .section-content-funil {
+        flex-direction: column;
+    }
+
+    .section-funil .section-content-funil figure svg {
+        width: 100%;
+    }
+
+    .section-funil .section-content-funil .text-content-funil {
+        flex: 1;
+    }
+
+    .section-funil .section-content-funil .text-content-funil p {
+        text-align: center;
+        display: block;
+    }
 }
 
 @media screen and (max-width: 769px) {
@@ -1369,14 +1395,6 @@ input:focus {
         max-width: 500px;
         width: 100%;
         max-height: 500px;
-    }
-
-    .section-funil .section-content-funil {
-        flex-direction: column;
-    }
-
-    .section-funil .section-content-funil .text-content-funil {
-        text-align: center;
     }
 }
 
