@@ -1357,13 +1357,8 @@ input:focus {
         width: 100%;
     }
 
-    .section-funil .section-content-funil .text-content-funil {
-        flex: 1;
-    }
-
     .section-funil .section-content-funil .text-content-funil p {
         text-align: center;
-        display: block;
     }
 }
 
