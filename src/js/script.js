@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".mySwiper", {
     lazy: {
       loadPrevNext: true,
       loadOnTransitionStart: true,
@@ -60,6 +60,29 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+
+  const swiperTegbe = new Swiper(".swiper-tegbe", {
+    lazy: {
+      loadPrevNext: true,
+      loadOnTransitionStart: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
 });
 
 function toggleAnswer(element) {
