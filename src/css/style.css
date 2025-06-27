@@ -1329,6 +1329,16 @@ input:focus {
         margin-right: 0;
         margin-bottom: 5em;
     }
+
+    #to-choose-itens {
+        flex-direction: column;
+    }
+
+    #to-choose-itens h2 {
+        padding-right: 0;
+        text-align: center;
+        padding: 0 1em 1em;
+    }
 }
 
 @media screen and (max-width: 769px) {
