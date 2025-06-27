@@ -593,7 +593,7 @@ p {
     transition: all 0.3s ease;
     text-transform: uppercase;
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     margin: 20px auto;
 }
 
@@ -1285,6 +1285,11 @@ input:focus {
 }
 
 @media (max-width: 1024px) {
+
+     header #container-header .buttons-header li {
+        display: none;
+    }
+
     .buttons-header {
         gap: 1em;
     }
