@@ -200,7 +200,7 @@ main {
 .video-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgb(32, 37, 76, 0.5);
+  background-color: #0c0014a8;
   z-index: -1;
 }
 
