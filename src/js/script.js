@@ -98,6 +98,19 @@ document.addEventListener("DOMContentLoaded", function () {
         header.classList.add("header-default");
       }
     });
+
+    const observerIframe = new MutationObserver(() => {
+    const iframe = document.querySelector('iframe[name^="amoforms_iframe_"]');
+    if (iframe) {
+      iframe.title = "Formulário Kommo";
+      observerIframe.disconnect();
+    }
+    });
+
+    observerIframe.observe(document.getElementById("section-2-form"), {
+      childList: true,
+      subtree: true
+    });
 });
 
 function toggleAnswer(element) {
