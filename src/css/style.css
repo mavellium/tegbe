@@ -453,7 +453,7 @@ p {
 .section-strategic-digital-transformation{
     height: auto;
     width: 100%;
-    padding: 5em 10em;
+    padding: 7em 10em 5em;
     text-align: center;
     background-color: var(--color-section);
     display: flex;
@@ -615,7 +615,7 @@ p {
 }
 
 .section-carousel {
-    padding: 0 2em 5em 2em;
+    padding: 0em 2em 7em;
     text-align: center;
     background-color: var(--color-section);
 }
@@ -927,7 +927,7 @@ p {
     display: flex;
     height: auto;
     width: 100%;
-    padding: 5em;
+    padding: 7em 7em 5em;
     background-color: #000000;
     justify-content: center;
     align-items: center;
@@ -1071,6 +1071,9 @@ input {
     height: 4em;
     border-radius: 10px;
     border: none;
+    font-size: 1.1em;
+    color: var(--placeholder-input);
+    font-weight: 500;
 }
 
 input:focus {
@@ -1202,7 +1205,7 @@ input::placeholder{
     flex-direction: column;
     height: auto;
     width: 100%;
-    padding: 6em;
+    padding: 8em 6em;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -1317,7 +1320,7 @@ input::placeholder{
 
 @media (max-width: 1250px){
     .section-strategic-digital-transformation{
-        padding: 5em 2em;
+        padding: 7em 2em;
     }
 }
 
