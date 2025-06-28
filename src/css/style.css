@@ -85,7 +85,7 @@ header {
     background-color: #0b0c11bd;
     border-bottom: 3px solid black;
     position: fixed;
-    z-index: 100000;
+    z-index: 1000;
 }
 
 header.header-scrolled{
@@ -1057,6 +1057,7 @@ p {
     flex: 1;
 }
 
+
 form {
     display: flex;
     flex-direction: column;
@@ -1326,10 +1327,6 @@ input::placeholder{
     .section-customers{
         padding: 4em 1em;
     }
-
-    .section-to-choose{
-        padding: 4em;
-    }
 }
 
 @media (max-width: 1250px){
@@ -1462,6 +1459,7 @@ input::placeholder{
     .section-lose-client {
         gap: 64px;
     }
+
 
 }
 
