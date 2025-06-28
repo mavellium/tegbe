@@ -38,6 +38,15 @@
     /* Fundo escuro mais profundo para contraste */
     --white: #FFFFFF;
     --border-light: #D0D0D0;
+
+    --placeholder-input: #353535;
+
+
+
+    /* Fonte */
+
+
+    --font-principal: 'Visby CF', 'Montserrat', sans-serif;
 }
 
 /* RESET */
@@ -50,7 +59,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    font-family: var(--font-principal);
 }
 
 a {
@@ -121,7 +130,7 @@ main {
 .buttons-header li {
     position: relative;
     color: #fff;
-    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    font-family: var(--font-principal);
     font-weight: 500;
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -160,7 +169,7 @@ main {
     margin-left: 2em;
     color: #fff;
     font-weight: bold;
-    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    font-family: var(--font-principal);
     border: none;
     background: linear-gradient(to right, #E61A4A, #CA1A41);
     box-shadow: 0 4px 12px rgba(230, 26, 74, 0.5);
@@ -200,7 +209,7 @@ main {
 .video-overlay {
   position: absolute;
   inset: 0;
-  background-color: #0c0014a8;
+  background-color: #0c0014bd;
   z-index: -1;
 }
 
@@ -255,7 +264,7 @@ p {
     border-radius: 10px;
     color: #fff;
     font-weight: bold;
-    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    font-family: var(--font-principal);
     border: none;
     background: linear-gradient(to right, #E61A4A, #CA1A41);
     box-shadow: 0 4px 12px rgba(230, 26, 74, 0.5);
@@ -346,16 +355,18 @@ p {
     align-items: center;
     background-color: #CA1A41;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 120px;
 }
 
 #lose-client-container {
-    width: 24em;
     display: flex;
     flex-direction: column;
     text-align: start;
     justify-content: center;
-    flex: 1;
+}
+
+#lose-client-content{
+    width: 27em;
 }
 
 #lose-client-content h1 {
@@ -376,7 +387,7 @@ p {
     border-radius: 10px;
     color: #20254C;
     font-weight: bold;
-    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    font-family: var(--font-principal);
     border: none;
     background: linear-gradient(to right, #f2d95d, #EEC35A);
     box-shadow: 0 4px 12px rgb(242, 217, 93);
@@ -455,6 +466,7 @@ p {
     font-size: 32px;
     color: #F0F0F0;
     font-weight: 700;
+    width: 75%;
 }
 
 .section-strategic-digital-transformation h1 span{
@@ -584,7 +596,7 @@ p {
     color: #F0F0F0;
     font-weight: 600;
     font-size: 18px;
-    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    font-family: var(--font-principal);
     border: none;
     background: linear-gradient(to right, #E61A4A, #CA1A41);
     box-shadow: 0 4px 12px rgba(230, 26, 74, 0.5);
@@ -822,13 +834,14 @@ p {
     border-radius: 10px;
     color: #20254C;
     font-weight: bold;
-    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    font-family: var(--font-principal);
     border: none;
     background: linear-gradient(to right, #f2d95d, #EEC35A);
     box-shadow: 0 4px 12px rgb(242, 217, 93);
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    z-index: 1;
 }
 
 #button-section-notforu:hover {
@@ -1033,8 +1046,8 @@ p {
 #section-2-form {
     display: flex;
     height: auto;
-    max-width: 450px;
-    padding: 50px 20px;
+    max-width: 560px;
+    padding: 50px 40px;
     width: 100%;
     border-radius: 10px;
     flex-direction: column;
@@ -1064,7 +1077,15 @@ input:focus {
     outline: none;
 }
 
+input::placeholder{
+    font-family: var(--font-principal);
+    font-weight: 500;
+    font-size: 1.1em;
+    color: var(--placeholder-input);
+}
+
 #form-submit-button {
+    font-size: 1.1rem;
     display: flex;
     height: 100%;
     align-items: center;
@@ -1074,7 +1095,7 @@ input:focus {
     color: #fff;
     font-weight: bold;
     margin-top: 1em;
-    font-family: 'Visby CF', 'Montserrat', sans-serif;
+    font-family: var(--font-principal);
     border: none;
     background: linear-gradient(to right, #E61A4A, #CA1A41);
     box-shadow: 0 4px 12px rgba(230, 26, 74, 0.5);
@@ -1216,11 +1237,17 @@ input:focus {
     flex-direction: column;
     text-align: start;
     justify-content: center;
-    font-size: 24px;
+    font-size: 25px;
+}
+
+.section-funil .section-content-funil .text-content-funil p {
+    line-height:1.5;
+    
 }
 
 .section-funil .section-content-funil .text-content-funil strong {
     color: white;
+    
 }
 
 .section-customers {
@@ -1382,6 +1409,7 @@ input:focus {
     .section-funil .section-content-funil .text-content-funil p {
         text-align: center;
     }
+
 }
 
 @media screen and (max-width: 769px) {
