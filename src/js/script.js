@@ -1,3 +1,7 @@
+import trocarVideo from './trocarVideo.js';
+
+trocarVideo();
+
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {

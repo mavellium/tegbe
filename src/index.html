@@ -2,23 +2,46 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tegbe</title>
-    <meta name="description"
-        content="A Tegbe é uma agência digital especializada em transformar o marketing online de pequenas e médias empresas em uma máquina de vendas, com estratégias personalizadas, tráfego pago de performance, produção de conteúdo que converte e automação comercial eficiente.">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-    </noscript>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tegbe</title>
+
+  <!-- SEO -->
+  <meta name="description"
+    content="A Tegbe é uma agência digital especializada em transformar o marketing online de pequenas e médias empresas em uma máquina de vendas, com estratégias personalizadas, tráfego pago de performance, produção de conteúdo que converte e automação comercial eficiente.">
+
+  <!-- Pré-carregamento de fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fontes com font-display: swap para evitar atraso de renderização -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" media="print"
+    onload="this.media='all';" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
+  </noscript>
+
+  <!-- CSS local -->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- CSS Swiper carregado de forma não bloqueante -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="preload" as="image" href="/public/bg-section-1.webp">
+  </noscript>
+
+  <!-- Pré-carregamento da imagem crítica de background -->
+  <link rel="preload" as="image" href="/public/bg-section-1.webp" type="image/webp" />
+
+  <!-- Favicon (se ainda não houver) -->
+  <link rel="icon" href="/public/favicon.ico" type="image/icon" />
 </head>
 
 <body>
+
     <header>
         <div class="logo">
             <a href="#section-1">
@@ -44,34 +67,35 @@
             </ul>
         </div>
     </header>
-    <section class="section-1" id="section-1">
-        <video autoplay muted loop playsinline class="background-video video-desktop">
-            <source  src="/public/bg-section-1.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo em HTML5.
-        </video>
 
-        <video autoplay muted loop playsinline class="background-video video-mobile">
-            <source class="video-mobile" src="../dist/public/bg-section-1-mobile.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo em HTML5.
-        </video>
+    <main>
+
+    <section class="section-1" id="section-1">
+        <div id="background-video">
+            <video autoplay muted loop playsinline class="background-video" id="bg-video">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+
+        </div>
+
         <div class="video-overlay"></div>
+
         <div id="container-section-1">
-            <div id="content1-section-1">
-                <h1>
-                    <strong>Estruture o marketing e as vendas da sua empresa <br>
-                    com soluções estratégicas sob medida</strong>
-                </h1>
-            </div>
-            <div id="content2-section-1">
-                <p>Chega de Investir em Marketing sem ver Resultados. Somos a <strong>Agência</strong> que</p>
-                <p>foca em <strong>Vendas</strong>, <strong>Estrutura</strong> e <strong>Escala</strong>,
-                    <strong>Sem Enrolação</strong>.
-                </p>
-            </div>
+        <div id="content1-section-1">
+            <h1>
+                <strong>Estruture o marketing e as vendas da sua empresa <br>
+                com soluções estratégicas sob medida</strong>
+            </h1>
+        </div>
+        <div id="content2-section-1">
+            <p>Chega de Investir em Marketing sem ver Resultados. Somos a <strong>Agência</strong> que</p>
+            <p>foca em <strong>Vendas</strong>, <strong>Estrutura</strong> e <strong>Escala</strong>,
+                <strong>Sem Enrolação</strong>.
+            </p>
+        </div>
             <a href="#section-2" class="button-section-1">QUERO MAIS INFORMAÇÕES</a>
         </div>
     </section>
-    <main>
 
         <section class="section-2" id="section-2">
 
@@ -2337,7 +2361,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script type="module" src="js/script.js" defer></script>
 </body>
 
 </html>
