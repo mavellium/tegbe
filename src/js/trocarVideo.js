@@ -7,7 +7,6 @@ function trocarVideo() {
     ? "/public/bg-section-1-mobile.mp4"
     : "/public/bg-section-1.mp4";
 
-  // Se já estiver no src certo, não troca
   if (video.src.includes(src)) return;
 
   video.src = src;

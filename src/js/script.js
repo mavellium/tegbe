@@ -1,6 +1,21 @@
-import trocarVideo from './trocarVideo.js';
+import trocarVideo from "./trocarVideo.js";
 
 trocarVideo();
+
+
+function toggleAnswer(element) {
+  const answer = element.querySelector(".faq-answer");
+  const isVisible = answer.style.display === "block";
+
+  if (isVisible) {
+    answer.style.display = "none";
+    element.classList.remove("open");
+  } else {
+    answer.style.display = "block";
+    element.classList.add("open");
+  }
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -65,67 +80,58 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-
   const swiperTegbe = new Swiper(".swiper-tegbe", {
     lazy: {
       loadPrevNext: true,
       loadOnTransitionStart: true,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
     slidesPerView: 1,
     spaceBetween: 0,
-    effect: 'fade',
+    effect: "fade",
     fadeEffect: {
       crossFade: false,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 
+  const header = document.querySelector("header");
+  const firstSection = document.querySelector(".section-1");
 
-  const header = document.querySelector('header');
-  const firstSection = document.querySelector('.section-1');
+  window.addEventListener("scroll", () => {
+    const sectionBottom = firstSection.getBoundingClientRect().bottom;
 
-    window.addEventListener("scroll", () => {
-      const sectionBottom = firstSection.getBoundingClientRect().bottom;
+    if (sectionBottom <= 0) {
+      header.classList.remove("header-default");
+      header.classList.add("header-scrolled");
+    } else {
+      header.classList.remove("header-scrolled");
+      header.classList.add("header-default");
+    }
+  });
 
-      if (sectionBottom <= 0) {
-        header.classList.remove("header-default");
-        header.classList.add("header-scrolled");
-      } else {
-        header.classList.remove("header-scrolled");
-        header.classList.add("header-default");
-      }
-    });
-
-    const observerIframe = new MutationObserver(() => {
+  const observerIframe = new MutationObserver(() => {
     const iframe = document.querySelector('iframe[name^="amoforms_iframe_"]');
     if (iframe) {
       iframe.title = "Formulário Kommo";
       observerIframe.disconnect();
     }
-    });
+  });
 
-    observerIframe.observe(document.getElementById("section-2-form"), {
-      childList: true,
-      subtree: true
+  observerIframe.observe(document.getElementById("section-2-form"), {
+    childList: true,
+    subtree: true,
+  });
+
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    item.addEventListener('click', function () {
+      toggleAnswer(this);
     });
+  });
 });
-
-function toggleAnswer(element) {
-  const answer = element.querySelector(".faq-answer");
-  const isVisible = answer.style.display === "block";
-
-  if (isVisible) {
-    answer.style.display = "none";
-    element.classList.remove("open");
-  } else {
-    answer.style.display = "block";
-    element.classList.add("open");
-  }
-}
