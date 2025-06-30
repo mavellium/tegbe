@@ -510,7 +510,7 @@ p {
     justify-content: flex-start;
     flex-direction: column;
     height: -webkit-fill-available;
-    width: 100%;
+    width: 300px;
 }
 
 .section-strategic-digital-transformation .swiper-slide .swiper-slide-content h2{
@@ -1608,6 +1608,7 @@ input::placeholder{
 
     .section-strategic-digital-transformation .swiper-slide .swiper-slide-content {
         margin-bottom: 48px;
+        width: 100%;
     }
 }
 
