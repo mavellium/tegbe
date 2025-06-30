@@ -510,7 +510,7 @@ p {
     justify-content: flex-start;
     flex-direction: column;
     height: -webkit-fill-available;
-    width: 300px;
+    width: 100%;
 }
 
 .section-strategic-digital-transformation .swiper-slide .swiper-slide-content h2{
@@ -1584,6 +1584,7 @@ input::placeholder{
     .section-strategic-digital-transformation .swiper-slide .swiper-slide-container{
         max-height: 800px;
         min-height: 800px;
+        width: 100%;
         flex-direction: column-reverse;
     }
 
@@ -1599,6 +1600,14 @@ input::placeholder{
     #section-2-content1,
     #section-2-content2 {
         height: 25em;
+    }
+
+    .section-strategic-digital-transformation .swiper-slide .swiper-slide-image img{
+        max-width: max-content;
+    }
+
+    .section-strategic-digital-transformation .swiper-slide .swiper-slide-content {
+        margin-bottom: 48px;
     }
 }
 
