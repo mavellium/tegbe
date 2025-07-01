@@ -71,11 +71,15 @@
     <main>
 
     <section class="section-1" id="section-1">
-        <div id="background-video">
-            <video autoplay muted loop playsinline id="bg-video" class="background-video" poster="fallback.jpg">
-                <source src="/public/bg-section-1.mp4" type="video/mp4">
-                Seu navegador não suporta vídeo em HTML5.
-            </video>
+
+        <video class="background-video only-desktop" autoplay muted loop playsinline poster="fallback.jpg">
+        <source src="/public/bg-section-1.mp4" type="video/mp4" />
+        </video>
+
+        <video class="background-video only-mobile" autoplay muted loop playsinline poster="fallback.jpg">
+        <source src="/public/bg-section-1-mobile.mp4" type="video/mp4" />
+        </video>
+
 
         </div>
 

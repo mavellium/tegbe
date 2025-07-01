@@ -213,9 +213,12 @@ main {
   z-index: 1; 
 }
 
-.video-mobile {
-      display: none;
-    }
+.only-desktop {
+  display: block;
+}
+.only-mobile {
+  display: none;
+}
 
 /* CONTAINER (SECTION 1) */
 #container-section-1 {
@@ -1507,6 +1510,13 @@ input::placeholder{
         max-width: 500px;
         width: 100%;
         max-height: 500px;
+    }
+
+    .only-desktop {
+        display: none;
+    }
+    .only-mobile {
+        display: block;
     }
 }
 
