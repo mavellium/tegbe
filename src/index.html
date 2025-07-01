@@ -72,16 +72,17 @@
 
     <section class="section-1" id="section-1">
 
-        <video class="background-video only-desktop" autoplay muted loop playsinline poster="fallback.jpg">
-        <source src="/public/bg-section-1.mp4" type="video/mp4" />
+        <!-- Vídeo desktop -->
+        <div class="video-wrapper">
+        <video class="background-video only-desktop" autoplay muted loop playsinline>
+            <source src="/public/bg-section-1.mp4" type="video/mp4" />
         </video>
 
-        <video class="background-video only-mobile" autoplay muted loop playsinline poster="fallback.jpg">
-        <source src="/public/bg-section-1-mobile.mp4" type="video/mp4" />
+        <video class="background-video only-mobile" autoplay muted loop playsinline>
+            <source src="/public/bg-section-1-mobile.mp4" type="video/mp4" />
         </video>
-
-
-        </div>
+        <img src="/public/fallback.svg" alt="Capa do vídeo" class="video-poster" />
+        </div>        
 
         <div class="video-overlay"></div>
 
