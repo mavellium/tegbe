@@ -209,8 +209,8 @@ main {
 .video-overlay {
   position: absolute;
   inset: 0;
-  background-color: #0c0014bd;
-  z-index: 0;
+  background-color: #0c0014bd; 
+  z-index: 1; 
 }
 
 .video-mobile {
