@@ -507,6 +507,7 @@ p {
     border-radius: 10px;
     text-align: start;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: initial;
     max-width: 800px;
