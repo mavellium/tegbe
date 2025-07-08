@@ -217,7 +217,7 @@ main {
 
 .video-poster {
   z-index: 0;
-  object-position: left center;
+  object-position: center;
 }
 
 .video-overlay {
@@ -225,10 +225,6 @@ main {
   inset: 0;
   background-color: #0c0014bd; 
   z-index: 1; 
-}
-
-.only-mobile {
-  display: none;
 }
 
 /* CONTAINER (SECTION 1) */
@@ -1525,9 +1521,6 @@ input::placeholder{
 
     .only-desktop {
         display: none;
-    }
-    .only-mobile {
-        display: block;
     }
 }
 
