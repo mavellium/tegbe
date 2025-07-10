@@ -1,8 +1,3 @@
-import trocarVideo from "./trocarVideo.js";
-
-trocarVideo();
-
-
 function toggleAnswer(element) {
   const answer = element.querySelector(".faq-answer");
   const isVisible = answer.style.display === "block";
