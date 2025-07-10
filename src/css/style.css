@@ -56,6 +56,10 @@
     box-sizing: border-box;
 }
 
+.destaque{
+    font-weight: bold;
+}
+
 html,
 body {
     height: 100%;
@@ -446,7 +450,7 @@ p {
     gap: 2em;
 }
 
-#to-choose-itens {
+.to-choose-item {
     width: 100%;
     height: 100%;
     color: #fff;
@@ -457,11 +461,11 @@ p {
     background-color: var(--dark-blue);
 }
 
-#to-choose-icons {
+.to-choose-icon {
     padding: 3em;
 }
 
-#to-choose-itens h2 {
+.to-choose-item h2 {
     padding-right: 3em;
 }
 
@@ -909,6 +913,9 @@ p {
 }
 
 .faq-question {
+    color: #fff;
+    background: none;
+    border: none;
     width: 100%;
     padding: 15px;
     font-weight: bold;
@@ -1033,16 +1040,18 @@ p {
     color: #fff;
 }
 
-#section-2-content1 h1 {
+#section-2-content1 h3, #section-2-content2 h3 {
     position: absolute;
-    right: 20px;
     top: 20px;
+    font-size: 24px;
 }
 
-#section-2-content2 h1 {
-    position: absolute;
-    left: 20px;
-    top: 20px;
+#section-2-content1 h3 {
+    right: 24px;
+}
+
+#section-2-content2 h3 {
+    left: 24px;
 }
 
 /* Figura em section-2-content2 à direita */
@@ -1327,11 +1336,11 @@ input::placeholder{
     display: none;
   }
 
-.custumer:hover .svg-branco {
+.customer:hover .svg-branco {
     display: none;
 }
 
-.custumer:hover .svg-colorido {
+.customer:hover .svg-colorido {
     display: block;
   }
 
@@ -1424,11 +1433,11 @@ input::placeholder{
         padding: 0 5em 5em 5em;
     }
 
-    #to-choose-itens {
+    .to-choose-item {
         flex-direction: column;
     }
 
-    #to-choose-itens h2 {
+    .to-choose-item h2 {
         padding-right: 0;
         text-align: center;
         padding: 0 1em 1em;
@@ -1564,13 +1573,13 @@ input::placeholder{
         padding: 3em 2em;
     }
 
-    #to-choose-itens {
+    .to-choose-item {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    #to-choose-itens h2 {
+    .to-choose-item h2 {
         text-align: center;
         padding: 0 20px 20px 20px
     }
