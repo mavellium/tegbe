@@ -1205,6 +1205,36 @@ input::placeholder{
     border-radius: 10px;
 }
 
+.card-content .video-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(30px, 5vw, 80px);
+    justify-content: center;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card-content .video-card figure {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content .video-card figure iframe {
+    height: 16em;
+}
+
+.card-content .video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .section-text-image .section-content .content-text {
     flex: 1;
 }
