@@ -76,10 +76,10 @@
 
             <!-- Vídeo desktop -->
             <div class="video-wrapper">
-                <video class="background-video only-desktop" autoplay muted loop playsinline aria-hidden="true">
-                    <source src="/public/bg-section-1.webm" type="video/mp4" />
+                <video class="background-video only-desktop" autoplay muted loop playsinline preload="none" aria-hidden="true">
+                    <source src="/public/bg-section-1.webm" type="video/webm" media="(min-width: 1024px)"/>
                 </video>
-                <img src="/public/fallback.jpeg" alt="" class="video-poster" aria-hidden="true" />
+               <img src="/public/fallback.jpeg" alt="Imagem de fundo" class="video-poster" loading="lazy" aria-hidden="true" />
             </div>        
 
             <div class="video-overlay"></div>
